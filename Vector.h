@@ -45,8 +45,9 @@ namespace vector333 {
   std::ostream& operator<<(std::ostream &out, const Vector &src);
   // Multiply * operator overload for Vector * Vector
   double operator*(const Vector &a, const Vector &b);
-  // Multiply * operator overload for Vector * double
-  double operator*(const Vector &a, double b);
+  // Multiply * operator overload for Vector * double and double * Vector
+  Vector operator*(const Vector &a, double b);
+  Vector operator*(double a, const Vector &b);
 }
 
 #endif //VECTOR_H

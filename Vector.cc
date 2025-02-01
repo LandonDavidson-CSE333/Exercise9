@@ -56,10 +56,13 @@ namespace vector333 {
     return product;
   }
 
-  double operator*(const Vector &a, double b) {
-    double product = a.get_x() * b;
-    product += a.get_y() * b;
-    product += a.get_z() * b;
-    return product;
+  Vector operator*(const Vector &a, double b) {
+    Vector tmp(a.get_x() * b, a.get_y() * b, a.get_z() * b);
+    return tmp;
+  }
+
+  Vector operator*(double a, const Vector &b) {
+    Vector tmp(b.get_x() * a, b.get_y() * a, b.get_z() * a);
+    return tmp;
   }
 }
