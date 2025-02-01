@@ -9,13 +9,13 @@ namespace vector333 {
   Vector::Vector(const Vector& src) {
     x_ = src.get_x();
     y_ = src.get_y();
-    z_ = src.get_y();
+    z_ = src.get_z();
   }
 
   Vector& Vector::operator=(const Vector &src) {
     x_ = src.get_x();
     y_ = src.get_y();
-    z_ = src.get_y();
+    z_ = src.get_z();
     return *this;
   }
 

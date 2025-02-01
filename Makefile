@@ -1,4 +1,4 @@
-ex9: Vector.o ex9.o
+all: Vector.o ex9.o
 	g++ -Wall -g -std=c++17 -o ex9 ex9.o Vector.o
 
 ex9.o: ex9.cc Vector.h
