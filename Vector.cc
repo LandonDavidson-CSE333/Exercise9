@@ -45,7 +45,8 @@ namespace vector333 {
   }
 
   std::ostream& operator<<(std::ostream &out, const Vector &src) {
-    out << "(" << src.get_x() << "," << src.get_y() << "," << src.get_z() << ")";
+    out << "(" << src.get_x() << "," << src.get_y()
+        << "," << src.get_z() << ")";
     return out;
   }
 
@@ -65,4 +66,4 @@ namespace vector333 {
     Vector tmp(b.get_x() * a, b.get_y() * a, b.get_z() * a);
     return tmp;
   }
-}
+}  // namespace vector333

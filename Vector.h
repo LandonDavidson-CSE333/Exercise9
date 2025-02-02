@@ -1,41 +1,41 @@
 // Copyright 2025 Landon Davidson
 // landond@uw.edu
 
-#ifndef VECTOR_H
-#define VECTOR_H
+#ifndef VECTOR_H_
+#define VECTOR_H_
 
 #include <iostream>
 
 namespace vector333 {
-  class Vector {
-    public:
-    // Zero arg constructor that initializes all fields to zero
-    Vector() : x_(0), y_(0), z_(0) {};
-    // Constructor to assign each member
-    Vector(double x, double y, double z) : x_(x), y_(y), z_(z) {};
-    // Copy the coords from src vector to this
-    Vector(const Vector& src);
-    // No heap usage so deconstructor is empty
-    ~Vector() {}
+class Vector {
+ public:
+  // Zero arg constructor that initializes all fields to zero
+  Vector() : x_(0), y_(0), z_(0) {}
+  // Constructor to assign each member
+  Vector(double x, double y, double z) : x_(x), y_(y), z_(z) {}
+  // Copy the coords from src vector to this
+  Vector(const Vector& src);
+  // No heap usage so deconstructor is empty
+  ~Vector() {}
 
-    // Getters for x, y, z
-    double get_x() const {return x_;}
-    double get_y() const {return y_;}
-    double get_z() const {return z_;}
+  // Getters for x, y, z
+  double get_x() const {return x_;}
+  double get_y() const {return y_;}
+  double get_z() const {return z_;}
 
-    // Assignment = operator overload
-    Vector& operator=(const Vector &src);
-    // Increment += operator overload
-    Vector& operator+=(const Vector &src);
-    // Decrement -= operator overload
-    Vector& operator-=(const Vector &src);
+  // Assignment = operator overload
+  Vector& operator=(const Vector &src);
+  // Increment += operator overload
+  Vector& operator+=(const Vector &src);
+  // Decrement -= operator overload
+  Vector& operator-=(const Vector &src);
 
-    private:
-    // Private members for the x, y, z components of vector
-    double x_;
-    double y_;
-    double z_;
-  };
+ private:
+  // Private members for the x, y, z components of vector
+  double x_;
+  double y_;
+  double z_;
+};
 
   // Addition + operator overload
   Vector operator+(const Vector &a, const Vector &b);
@@ -48,6 +48,6 @@ namespace vector333 {
   // Multiply * operator overload for Vector * double and double * Vector
   Vector operator*(const Vector &a, double b);
   Vector operator*(double a, const Vector &b);
-}
+}  // namespace vector333
 
-#endif //VECTOR_H
+#endif  // VECTOR_H_
